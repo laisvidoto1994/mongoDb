@@ -8,14 +8,11 @@ https://www.youtube.com/watch?v=pWbMrx5rVBE
 //--directoryperdb
 
 //Usa um diretório separado para armazenar dados para cada banco de dados. 
-
 //Os diretórios estão sob o --dbpathdiretório e cada nome de subdiretório corresponde 
-
 //ao nome do banco de dados.
 
 
-//--dbpath <path> 
-	
+//--dbpath <path> 	
 //O diretório no qual a instância do mongod armazena seus dados.
 
 
@@ -23,12 +20,10 @@ mongod --directoryperdb --dbpath C:\mongodb\data\db --logpath C:\mongodb\log\mon
 
 
 // startando o serviço do mongo
-
 net start MongoDB
 
 
 // ver á versão do mongo
-
 mongo
 
 // limpa dados da tela do prompt
