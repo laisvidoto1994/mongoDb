@@ -8,11 +8,10 @@ https://www.youtube.com/watch?v=pWbMrx5rVBE
 //--directoryperdb
 
 //Usa um diretório separado para armazenar dados para cada banco de dados. 
-//Os diretórios estão sob o --dbpathdiretório e cada nome de subdiretório corresponde 
-//ao nome do banco de dados.
-
+Os diretórios estão sob o --dbpathdiretório e cada nome de subdiretório corresponde ao nome do banco de dados.
 
 //--dbpath <path> 	
+	
 //O diretório no qual a instância do mongod armazena seus dados.
 
 
@@ -37,7 +36,9 @@ use nomeDataBase
 //saber qual o database que estou usando no momento
 db
 
-//comando de criaçã de um usuario no banco de dados e seu nivel de acesso
+# Criação do usuário do banco 
+
+//comando de criação de um usuario no banco de dados e seu nivel de acesso
 
 db.createUser({
 
@@ -55,10 +56,8 @@ db.createCollection('nomeDaTabela');
 
 show collections
 
-
-/*
-	inserção
-*/
+ 
+# Inserção 
 
 //acessa os dados no database atual, no qual tem uma tabela chamada customers,
 //o qual quero inserir apenas os seguintes dados entre parenteses e chaves
@@ -146,9 +145,7 @@ db.customers.insert([
 ]);
 
 
-/*
-	busca
-*/
+# Busca 
 
 //traz dos os dados daquele database contendo aquela tabela informada
 
@@ -205,13 +202,12 @@ db.customers.find().forEach(function(doc){print("Customer Name:"+doc.first_name)
  
  
 
-/*
-	atualização
-*/ 
+# Atualização 
  
 //atualização de dados da tabela customers
-//procure dados da linha em que first_name seja = "John"
+procure dados da linha em que first_name seja = "John"
 e atualize por {first_name:"John",last_name:"Doe", gender:"male"}
+
 db.customers.update(
 
 	{first_name:"John"},
@@ -220,6 +216,7 @@ db.customers.update(
  );
  
 //para atualizar á tabela criando uma coluna da tabela ->{$set:{ gender:"male"}}
+
 db.customers.update(
 
 	{first_name:"Steven"},
@@ -244,6 +241,7 @@ db.customers.update(
  );
 
  //remove coluna e dado da tabela
+ 
 db.customers.update(
 
 	{first_name:"Steven"},
@@ -253,6 +251,7 @@ db.customers.update(
 
 
  //NÃO ATUALIZA
+ 
 db.customers.update(
 
 	{first_name:"Mary"},	
@@ -261,6 +260,7 @@ db.customers.update(
  );
 
  // adiciona os dados de Mary no banco
+ 
 db.customers.update(
 
 	{first_name:"Mary"},	
@@ -278,9 +278,7 @@ db.customers.update(
  );
 
  
-/*
-	exclução
-*/
+# Exclução 
  
 //exclui os dados do Steven da tabela
 
