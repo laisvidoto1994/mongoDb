@@ -41,9 +41,13 @@ db
 //comando de criaçã de um usuario no banco de dados e seu nivel de acesso
 
 db.createUser({
+
 	user: "lais",
+	
 	pwd: "123456",
+	
 	roles: [ "readWrite", "dbAdmin" ]
+	
 });
 
 //cria no nome da tabela
