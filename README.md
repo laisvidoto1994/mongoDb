@@ -14,10 +14,11 @@ Os diretórios estão sob o --dbpathdiretório e cada nome de subdiretório corr
 	
 //O diretório no qual a instância do mongod armazena seus dados.
 
-
+//
 mongod --directoryperdb --dbpath C:\mongodb\data\db --logpath C:\mongodb\log\mongo.log --logappend --install
  
 // startando o serviço do mongo
+
 net start MongoDB
 
 
