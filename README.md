@@ -17,8 +17,7 @@ https://www.youtube.com/watch?v=pWbMrx5rVBE
 
 
 mongod --directoryperdb --dbpath C:\mongodb\data\db --logpath C:\mongodb\log\mongo.log --logappend --install
-
-
+ 
 // startando o serviço do mongo
 net start MongoDB
 
@@ -51,9 +50,11 @@ db.createUser({
 });
 
 //cria no nome da tabela
+
 db.createCollection('nomeDaTabela');
 
 //mostra as tabelas criadas
+
 show collections
 
 
@@ -63,15 +64,20 @@ show collections
 
 //acessa os dados no database atual, no qual tem uma tabela chamada customers,
 //o qual quero inserir apenas os seguintes dados entre parenteses e chaves
+
 db.customers.insert({first_name:"John",last_name:"Doe"});
 
 //inserir varios dados os mesmo tempo
 db.customers.insert([
+
 	{first_name:"Steven",last_name:"Smith"},
+	
 	{first_name:"Joan",last_name:"Johnson", gender:"female"}
+	
 ]);
 
 // inserção em cadeia
+
 db.customers.insert([
 	{
 		first_name:"Troy",
@@ -226,20 +232,30 @@ db.customers.update(
 
  //NÃO ATUALIZA
 db.customers.update(
+
 	{first_name:"Mary"},
+	
 	{$unset:{age:1} }
+	
  );
 
  // adiciona os dados de Mary no banco
 db.customers.update(
+
 	{first_name:"Mary"},
+	
 	{first_name:"Mary",last_name:"Samson"},{upsert:true}
+	
  );
 
 //renomeia apenas o nome da coluna de gender para sex
+
 db.customers.update(
+
 	{first_name:"Steven"},
+	
 	{$rename:{"gender":"sex"} }
+	
  );
 
  
@@ -248,6 +264,7 @@ db.customers.update(
 */
  
 //exclui os dados do Steven da tabela
+
 db.customers.remove({first_name:"Steven"});
 
 
