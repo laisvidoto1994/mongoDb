@@ -5,6 +5,9 @@ comando do mongodB
 exemplo-> 
 https://www.youtube.com/watch?v=pWbMrx5rVBE
 
+instalação-> 
+https://www.youtube.com/watch?v=FwMwO8pXfq0
+
 //--directoryperdb
 
 //Usa um diretório separado para armazenar dados para cada banco de dados. 
