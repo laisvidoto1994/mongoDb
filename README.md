@@ -41,10 +41,8 @@ db
 
 db.createUser({
 
-	user: "lais",
-	
-	pwd: "123456",
-	
+	user: "lais",	
+	pwd: "123456",	
 	roles: [ "readWrite", "dbAdmin" ]
 	
 });
