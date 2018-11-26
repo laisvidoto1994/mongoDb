@@ -44,6 +44,9 @@ use nomeDataBase
 //saber qual o database que estou usando no momento
 db
 
+// se eu quiser sair do prompt do mongo
+exit
+
 # Criação do usuário do banco 
 
 //comando de criação de um usuario no banco de dados e seu nivel de acesso
