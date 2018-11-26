@@ -21,9 +21,13 @@ Os diretórios estão sob o --dbpathdiretório e cada nome de subdiretório corr
 mongod --directoryperdb --dbpath C:\mongodb\data\db --logpath C:\mongodb\log\mongo.log --logappend --install
  
 // startando o serviço do mongo
+net start MongoDB 
 
-net start MongoDB
+// ou então posso saber quais serviços estão rodando na maquina filtrando por Mongo
+net start | findstr Mongo
 
+// comando para parar o serviço do mongo 
+net stop MongoDB
 
 // ver á versão do mongo
 mongo
