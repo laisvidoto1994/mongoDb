@@ -18,33 +18,43 @@ Os diretórios estão sob o --dbpathdiretório e cada nome de subdiretório corr
 //O diretório no qual a instância do mongod armazena seus dados.
 
 //abrir á pasta como admin
+
 mongod --directoryperdb --dbpath C:\mongodb\data\db --logpath C:\mongodb\log\mongo.log --logappend --install
  
 // startando o serviço do mongo
+
 net start MongoDB 
 
 // ou então posso saber quais serviços estão rodando na maquina filtrando por Mongo
+
 net start | findstr Mongo
 
 // comando para parar o serviço do mongo 
+
 net stop MongoDB
 
 // ver á versão do mongo
+
 mongo
 
 // limpa dados da tela do prompt
+
 cls
 
 // mostra os bancos disponiveis
+
 show dbs
 
 //cria um database
+
 use nomeDataBase
 
 //saber qual o database que estou usando no momento
+
 db
 
 // se eu quiser sair do prompt do mongo
+
 exit
 
 # Criação do usuário do banco 
