@@ -90,8 +90,8 @@ Os diretórios estão sob o --dbpathdiretório e cada nome de subdiretório corr
 //comando de criação de um usuario no banco de dados e seu nivel de acesso
 
 db.createUser({  
-	user: "lais",	
-	pwd: "123456",	
+	user: "lais",	  
+	pwd: "123456",	  
 	roles: [ "readWrite", "dbAdmin" ]	  
 });
 
@@ -112,11 +112,9 @@ show collections
 db.customers.insert({first_name:"John",last_name:"Doe"});
 
 //inserir varios dados os mesmo tempo
-db.customers.insert([
-
-	{first_name:"Steven",last_name:"Smith"},	
-	{first_name:"Joan",last_name:"Johnson", gender:"female"}
-	
+db.customers.insert([  
+	{first_name:"Steven",last_name:"Smith"},  
+	{first_name:"Joan",last_name:"Johnson", gender:"female"}  	
 ]);
 
 // inserção em cadeia
