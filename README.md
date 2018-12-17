@@ -19,43 +19,43 @@ Os diretórios estão sob o --dbpathdiretório e cada nome de subdiretório corr
 
 //abrir á pasta como admin
 
-mongod --directoryperdb --dbpath C:\mongodb\data\db --logpath C:\mongodb\log\mongo.log --logappend --install
+##### mongod --directoryperdb --dbpath C:\mongodb\data\db --logpath C:\mongodb\log\mongo.log --logappend --install
  
 // startando o serviço do mongo
 
-_net start MongoDB_
+##### net start MongoDB
 
 // ou então posso saber quais serviços estão rodando na maquina filtrando por Mongo
 
-net start | findstr Mongo
+##### net start | findstr Mongo
 
 // comando para parar o serviço do mongo 
 
-net stop MongoDB
+##### net stop MongoDB
 
 // ver á versão do mongo
 
-mongo
+##### mongo
 
 // limpa dados da tela do prompt
 
-cls
+##### cls
 
 // mostra os bancos disponiveis
 
-show dbs
+##### show dbs
 
 //cria um database
 
-use nomeDataBase
+##### use nomeDataBase
 
 //saber qual o database que estou usando no momento
 
-db
+##### db
 
 // se eu quiser sair do prompt do mongo
 
-exit
+##### exit
 
 # Instartando banco já existente
 
@@ -63,27 +63,27 @@ exit
 
 // ver á versão do mongo
 
-mongo
+##### mongo
 
 // limpa dados da tela do prompt
 
-cls
+##### cls
 
 // mostra os bancos disponiveis
 
-show dbs
+##### show dbs
 
 //cria um database
 
-use nomeDataBase
+##### use nomeDataBase
 
 //saber qual o database que estou usando no momento
 
-db
+##### db
 
 // se eu quiser sair do prompt do mongo
 
-exit
+##### exit
 
 # Criação do usuário do banco 
 
