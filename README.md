@@ -23,7 +23,7 @@ mongod --directoryperdb --dbpath C:\mongodb\data\db --logpath C:\mongodb\log\mon
  
 // startando o serviço do mongo
 
-*net start MongoDB* 
+_net start MongoDB_
 
 // ou então posso saber quais serviços estão rodando na maquina filtrando por Mongo
 
