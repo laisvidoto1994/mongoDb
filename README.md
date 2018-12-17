@@ -18,7 +18,7 @@ Os diretórios estão sob o --dbpathdiretório e cada nome de subdiretório corr
 > O diretório no qual a instância do mongod armazena seus dados.
 
 > abrir á pasta como admin
-#### mongod --directoryperdb --dbpath C:\mongodb\data\db --logpath C:\mongodb\log\mongo.log --logappend --install
+#### mongod --directoryperdb --dbpath C:\mongodb\data\db --logpath C:\mongodb\log\mongo.log --logappend --install textcolor(4);
  
 > instartando o serviço do mongo  
 #### net start MongoDB
