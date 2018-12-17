@@ -17,72 +17,56 @@ Os diretórios estão sob o --dbpathdiretório e cada nome de subdiretório corr
 	
 //O diretório no qual a instância do mongod armazena seus dados.
 
-//abrir á pasta como admin
-
+//abrir á pasta como admin  
 #### mongod --directoryperdb --dbpath C:\mongodb\data\db --logpath C:\mongodb\log\mongo.log --logappend --install
  
-// startando o serviço do mongo
-
+// startando o serviço do mongo  
 #### net start MongoDB
 
-// ou então posso saber quais serviços estão rodando na maquina filtrando por Mongo
-
+// ou então posso saber quais serviços estão rodando na maquina filtrando por Mongo  
 #### net start | findstr Mongo
 
-// comando para parar o serviço do mongo 
-
+// comando para parar o serviço do mongo  
 #### net stop MongoDB
 
-// ver á versão do mongo
-
+// ver á versão do mongo  
 #### mongo
 
-// limpa dados da tela do prompt
-
+// limpa dados da tela do prompt  
 #### cls
 
-// mostra os bancos disponiveis
-
+// mostra os bancos disponiveis  
 #### show dbs
 
-//cria um database
-
+//cria um database   
 #### use nomeDataBase
 
-//saber qual o database que estou usando no momento
-
+//saber qual o database que estou usando no momento  
 #### db
 
-// se eu quiser sair do prompt do mongo
-
+// se eu quiser sair do prompt do mongo  
 #### exit
 
 # Instartando banco já existente
 
 // abra á pasta onde o mongo foi instalado e digite cmd, para abrir o prompt de comamando
 
-// ver á versão do mongo
-
+// ver á versão do mongo  
 #### mongo
 
-// limpa dados da tela do prompt
-
+// limpa dados da tela do prompt  
 #### cls
 
-// mostra os bancos disponiveis
-
+// mostra os bancos disponiveis  
 #### show dbs
 
-//cria um database
-
+//cria um database  
 #### use nomeDataBase
 
-//saber qual o database que estou usando no momento
-
+//saber qual o database que estou usando no momento  
 #### db
 
-// se eu quiser sair do prompt do mongo
-
+// se eu quiser sair do prompt do mongo  
 #### exit
 
 # Criação do usuário do banco 
@@ -111,7 +95,7 @@ show collections
 
 db.customers.insert({first_name:"John",last_name:"Doe"});
 
-//inserir varios dados os mesmo tempo
+//inserir varios dados os mesmo tempo  
 db.customers.insert([  
 	{first_name:"Steven",last_name:"Smith"},  
 	{first_name:"Joan",last_name:"Johnson", gender:"female"}  	
