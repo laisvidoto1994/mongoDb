@@ -61,11 +61,15 @@ exit
 
 // abra á pasta onde o mongo foi instalado e digite cmd, para abrir o prompt de comamando
 
-// digite para ver á versão do mongo
+// ver á versão do mongo
 
 mongo
 
 // limpa dados da tela do prompt
+
+cls
+
+// mostra os bancos disponiveis
 
 show dbs
 
