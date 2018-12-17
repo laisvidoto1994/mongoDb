@@ -57,6 +57,30 @@ db
 
 exit
 
+# Instartando banco já existente
+
+// abra á pasta onde o mongo foi instalado e digite cmd, para abrir o prompt de comamando
+
+// digite para ver á versão do mongo
+
+mongo
+
+// limpa dados da tela do prompt
+
+show dbs
+
+//cria um database
+
+use nomeDataBase
+
+//saber qual o database que estou usando no momento
+
+db
+
+// se eu quiser sair do prompt do mongo
+
+exit
+
 # Criação do usuário do banco 
 
 //comando de criação de um usuario no banco de dados e seu nivel de acesso
