@@ -98,32 +98,31 @@ db.customers.insert({first_name:"John",last_name:"Doe"});
 //inserir varios dados os mesmo tempo  
 db.customers.insert([  
 	{first_name:"Steven",last_name:"Smith"},  
-	{first_name:"Joan",last_name:"Johnson", gender:"female"}  	
+	{first_name:"Joan",last_name:"Johnson", gender:"female"}  
 ]);
 
 // inserção em cadeia
 
-db.customers.insert([
-
+db.customers.insert([  
 	{
-		first_name:"Troy",
-		last_name:"Makons",
-		gender:"male",
-		age:33,
-		address:{
-			street:"432 Essex st",
-			city:"Lawrence",
-			state:"MA"
-		},
-		memberships:["mem1", "mem2"],
-		balance:125.32
-	}, 
-	{
-		first_name:"Beth",
-		last_name:"Jenkins",
-		gender:"female",
-		age:23,
-		address:{
+		first_name:"Troy",  
+		last_name:"Makons",  
+		gender:"male",  
+		age:33,  
+		address:{  
+			street:"432 Essex st",  
+			city:"Lawrence",  
+			state:"MA"  
+		},  
+		memberships:["mem1", "mem2"],  
+		balance:125.32  
+	},   
+	{  
+		first_name:"Beth",  
+		last_name:"Jenkins",  
+		gender:"female",  
+		age:23,  
+		address:{  
 			street:"411 Blue st",
 			city:"Boston",
 			state:"MA"
