@@ -48,7 +48,7 @@ Os diretórios estão sob o --dbpathdiretório e cada nome de subdiretório corr
 #### exit
 
 # Instartando banco já existente
-
+*****
 > abra á pasta onde o mongo foi instalado e digite cmd, para abrir o prompt de comamando
 
 > ver á versão do mongo  
@@ -87,7 +87,7 @@ Os diretórios estão sob o --dbpathdiretório e cada nome de subdiretório corr
 
  
 # Inserção 
-
+*****
 > acessa os dados no database atual, no qual tem uma tabela chamada customers,
  o qual quero inserir apenas os seguintes dados entre parenteses e chaves  
 #### db.customers.insert({first_name:"John",last_name:"Doe"});
@@ -169,7 +169,7 @@ Os diretórios estão sob o --dbpathdiretório e cada nome de subdiretório corr
 
 
 # Busca 
-
+*****
 > traz dos os dados daquele database contendo aquela tabela informada  
 #### db.customers.find();
 
@@ -213,7 +213,7 @@ Os diretórios estão sob o --dbpathdiretório e cada nome de subdiretório corr
  
 
 # Atualização 
- 
+ *****
 > atualização de dados da tabela customers
 procure dados da linha em que first_name seja = "John"
 e atualize por {first_name:"John",last_name:"Doe", gender:"male"}
@@ -269,7 +269,7 @@ e atualize por {first_name:"John",last_name:"Doe", gender:"male"}
 
  
 # Exclução 
- 
+ *****
 > exclui os dados do Steven da tabela  
 #### db.customers.remove({first_name:"Steven"});
 
