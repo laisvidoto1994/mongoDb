@@ -81,11 +81,11 @@ db.createUser({
 
 > cria no nome da tabela
 
-db.createCollection('nomeDaTabela');
+#### db.createCollection('nomeDaTabela');
 
 > mostra as tabelas criadas
 
-show collections
+#### show collections
 
  
 # Inserção 
@@ -93,17 +93,17 @@ show collections
 > acessa os dados no database atual, no qual tem uma tabela chamada customers,
  o qual quero inserir apenas os seguintes dados entre parenteses e chaves
 
-db.customers.insert({first_name:"John",last_name:"Doe"});
+#### db.customers.insert({first_name:"John",last_name:"Doe"});
 
 > inserir varios dados os mesmo tempo  
-db.customers.insert([  
+#### db.customers.insert([  
 	{first_name:"Steven",last_name:"Smith"},  
 	{first_name:"Joan",last_name:"Johnson", gender:"female"}  
 ]);
 
 > inserção em cadeia
 
-db.customers.insert([  
+#### db.customers.insert([  
 	{
 		first_name:"Troy",  
 		last_name:"Makons",  
@@ -177,56 +177,56 @@ db.customers.insert([
 
 > traz dos os dados daquele database contendo aquela tabela informada
 
-db.customers.find();
+#### db.customers.find();
 
 >  traz os dados ispecificos que eu estiver passando
 
-db.customers.find({first_name:"John"});
+#### db.customers.find({first_name:"John"});
 
 > realiza á busca de ambos os dados informados
 
-db.customers.find({$or:[{first_name:"John"},{first_name:"Steven"}]});
+#### db.customers.find({$or:[{first_name:"John"},{first_name:"Steven"}]});
 
 > busca todos que tenham menos de 40 anos
 
-db.customers.find({age:{$lt:40}});
+#### db.customers.find({age:{$lt:40}});
 
 > faz consulta de todos os dados quando o city seja igual á boston(exemplo de objeto)
 
-db.customers.find({"adress.city":"Boston"});
+#### db.customers.find({"adress.city":"Boston"});
 
 > faz consulta de todos os dados quando o memberships seja igual á mem1(exemplo de array)
 
-db.customers.find({memberships:"mem1"});
+#### db.customers.find({memberships:"mem1"});
 
 > ele mostra os registros ideitado
 
-db.customers.find().pretty();
+#### db.customers.find().pretty();
 
 
-db.customers.find().sort({last_name:1});
+#### db.customers.find().sort({last_name:1});
 
-db.customers.find().sort({last_name:-1}).pretty();
+#### db.customers.find().sort({last_name:-1}).pretty();
 
 > conta á quantidade de registros totais da tabela customers
 
-db.customers.find().count();
+#### db.customers.find().count();
 
 > conta á quantidade de registros que o genero sejá igual á male da tabela customers
 
-db.customers.find({gender:"male"}).count();
+#### db.customers.find({gender:"male"}).count();
 
 > mostra apenas 4 registros da tabela
 
-db.customers.find().limit(4);
+#### db.customers.find().limit(4);
 
 > ordene pelo last_name do A á Z, e mostra apenas 4 registros da tabela
 
-db.customers.find().limit(4).sort({last_name:1});
+#### db.customers.find().limit(4).sort({last_name:1});
 
 > traga todos os campos, porem quero da forma Customer Name: first_name
 
-db.customers.find().forEach(function(doc){print("Customer Name:"+doc.first_name)});
+#### db.customers.find().forEach(function(doc){print("Customer Name:"+doc.first_name)});
  
  
 
@@ -236,73 +236,57 @@ db.customers.find().forEach(function(doc){print("Customer Name:"+doc.first_name)
 procure dados da linha em que first_name seja = "John"
 e atualize por {first_name:"John",last_name:"Doe", gender:"male"}
 
-db.customers.update(
-
-	{first_name:"John"},
-	{first_name:"John",last_name:"Doe", gender:"male"}
-	
+db.customers.update(  
+	{first_name:"John"},  
+	{first_name:"John",last_name:"Doe", gender:"male"}  	
  );
  
 > para atualizar á tabela criando uma coluna da tabela ->{$set:{ gender:"male"}}
 
 db.customers.update(
-
-	{first_name:"Steven"},
-	{$set:{gender:"male"} }
-	
+	{first_name:"Steven"},  
+	{$set:{gender:"male"} }  	
  );
 
 
-db.customers.update(
-
-	{first_name:"Steven"},
-	{$set:{age:45} }
-	
+db.customers.update(  
+	{first_name:"Steven"},  
+	{$set:{age:45} }  	
  );
 
 
-db.customers.update(
-
-	{first_name:"Steven"},
-	{$inc:{age:5} }
-	
+db.customers.update(  
+	{first_name:"Steven"},  
+	{$inc:{age:5} }  	
  );
 
  > remove coluna e dado da tabela
  
-db.customers.update(
-
-	{first_name:"Steven"},
-	{$unset:{age:1} }
-	
+db.customers.update(  
+	{first_name:"Steven"},  
+	{$unset:{age:1} }  	
  );
 
 
  > NÃO ATUALIZA
  
-db.customers.update(
-
-	{first_name:"Mary"},	
-	{$unset:{age:1} }
-	
+db.customers.update(  
+	{first_name:"Mary"} ,	  
+	{$unset:{age:1} }  	
  );
 
  > adiciona os dados de Mary no banco
  
-db.customers.update(
-
-	{first_name:"Mary"},	
-	{first_name:"Mary",last_name:"Samson"},{upsert:true}
-	
- );
+db.customers.update(  
+	{first_name:"Mary"},	  
+	{first_name:"Mary",last_name:"Samson"},{upsert:true}  
+);
 
 > renomeia apenas o nome da coluna de gender para sex
 
-db.customers.update(
-
-	{first_name:"Steven"},	
-	{$rename:{"gender":"sex"} }
-	
+db.customers.update(  
+	{first_name:"Steven"},	  
+	{$rename:{"gender":"sex"} }  	
  );
 
  
@@ -310,7 +294,7 @@ db.customers.update(
  
 > exclui os dados do Steven da tabela
 
-db.customers.remove({first_name:"Steven"});
+#### db.customers.remove({first_name:"Steven"});
 
 
 db.customers.remove({first_name:"Steven"}, {justOne:true});
