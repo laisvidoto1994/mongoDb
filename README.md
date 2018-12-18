@@ -23,55 +23,55 @@ Os diretórios estão sob o --dbpathdiretório e cada nome de subdiretório corr
 > instartando o serviço do mongo  
 #### net start MongoDB
 
-// ou então posso saber quais serviços estão rodando na maquina filtrando por Mongo  
+> ou então posso saber quais serviços estão rodando na maquina filtrando por Mongo  
 #### net start | findstr Mongo
 
-// comando para parar o serviço do mongo  
+> comando para parar o serviço do mongo  
 #### net stop MongoDB
 
-// ver á versão do mongo  
+> ver á versão do mongo  
 #### mongo
 
-// limpa dados da tela do prompt  
+> limpa dados da tela do prompt  
 #### cls
 
-// mostra os bancos disponiveis  
+> mostra os bancos disponiveis  
 #### show dbs
 
-//cria um database   
+> cria um database   
 #### use nomeDataBase
 
-//saber qual o database que estou usando no momento  
+> saber qual o database que estou usando no momento  
 #### db
 
-// se eu quiser sair do prompt do mongo  
+> se eu quiser sair do prompt do mongo  
 #### exit
 
 # Instartando banco já existente
 
-// abra á pasta onde o mongo foi instalado e digite cmd, para abrir o prompt de comamando
+> abra á pasta onde o mongo foi instalado e digite cmd, para abrir o prompt de comamando
 
-// ver á versão do mongo  
+> ver á versão do mongo  
 #### mongo
 
-// limpa dados da tela do prompt  
+> limpa dados da tela do prompt  
 #### cls
 
-// mostra os bancos disponiveis  
+> mostra os bancos disponiveis  
 #### show dbs
 
-//cria um database  
+> cria um database  
 #### use nomeDataBase
 
-//saber qual o database que estou usando no momento  
+> saber qual o database que estou usando no momento  
 #### db
 
-// se eu quiser sair do prompt do mongo  
+> se eu quiser sair do prompt do mongo  
 #### exit
 
 # Criação do usuário do banco 
 
-//comando de criação de um usuario no banco de dados e seu nivel de acesso
+> comando de criação de um usuario no banco de dados e seu nivel de acesso
 
 db.createUser({  
 	user: "lais",	  
@@ -79,7 +79,7 @@ db.createUser({
 	roles: [ "readWrite", "dbAdmin" ]	  
 });
 
-//cria no nome da tabela
+> cria no nome da tabela
 
 db.createCollection('nomeDaTabela');
 
