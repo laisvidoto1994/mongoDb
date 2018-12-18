@@ -83,25 +83,25 @@ db.createUser({
 
 db.createCollection('nomeDaTabela');
 
-//mostra as tabelas criadas
+> mostra as tabelas criadas
 
 show collections
 
  
 # Inserção 
 
-//acessa os dados no database atual, no qual tem uma tabela chamada customers,
-//o qual quero inserir apenas os seguintes dados entre parenteses e chaves
+> acessa os dados no database atual, no qual tem uma tabela chamada customers,
+ o qual quero inserir apenas os seguintes dados entre parenteses e chaves
 
 db.customers.insert({first_name:"John",last_name:"Doe"});
 
-//inserir varios dados os mesmo tempo  
+> inserir varios dados os mesmo tempo  
 db.customers.insert([  
 	{first_name:"Steven",last_name:"Smith"},  
 	{first_name:"Joan",last_name:"Johnson", gender:"female"}  
 ]);
 
-// inserção em cadeia
+> inserção em cadeia
 
 db.customers.insert([  
 	{
@@ -175,31 +175,31 @@ db.customers.insert([
 
 # Busca 
 
-//traz dos os dados daquele database contendo aquela tabela informada
+> traz dos os dados daquele database contendo aquela tabela informada
 
 db.customers.find();
 
-// traz os dados ispecificos que eu estiver passando
+>  traz os dados ispecificos que eu estiver passando
 
 db.customers.find({first_name:"John"});
 
-//realiza á busca de ambos os dados informados
+> realiza á busca de ambos os dados informados
 
 db.customers.find({$or:[{first_name:"John"},{first_name:"Steven"}]});
 
-//busca todos que tenham menos de 40 anos
+> busca todos que tenham menos de 40 anos
 
 db.customers.find({age:{$lt:40}});
 
-//faz consulta de todos os dados quando o city seja igual á boston(exemplo de objeto)
+> faz consulta de todos os dados quando o city seja igual á boston(exemplo de objeto)
 
 db.customers.find({"adress.city":"Boston"});
 
-//faz consulta de todos os dados quando o memberships seja igual á mem1(exemplo de array)
+> faz consulta de todos os dados quando o memberships seja igual á mem1(exemplo de array)
 
 db.customers.find({memberships:"mem1"});
 
-//ele mostra os registros ideitado
+> ele mostra os registros ideitado
 
 db.customers.find().pretty();
 
@@ -208,23 +208,23 @@ db.customers.find().sort({last_name:1});
 
 db.customers.find().sort({last_name:-1}).pretty();
 
-//conta á quantidade de registros totais da tabela customers
+> conta á quantidade de registros totais da tabela customers
 
 db.customers.find().count();
 
-//conta á quantidade de registros que o genero sejá igual á male da tabela customers
+> conta á quantidade de registros que o genero sejá igual á male da tabela customers
 
 db.customers.find({gender:"male"}).count();
 
-// mostra apenas 4 registros da tabela
+> mostra apenas 4 registros da tabela
 
 db.customers.find().limit(4);
 
-// ordene pelo last_name do A á Z, e mostra apenas 4 registros da tabela
+> ordene pelo last_name do A á Z, e mostra apenas 4 registros da tabela
 
 db.customers.find().limit(4).sort({last_name:1});
 
-//traga todos os campos, porem quero da forma Customer Name: first_name
+> traga todos os campos, porem quero da forma Customer Name: first_name
 
 db.customers.find().forEach(function(doc){print("Customer Name:"+doc.first_name)});
  
@@ -232,7 +232,7 @@ db.customers.find().forEach(function(doc){print("Customer Name:"+doc.first_name)
 
 # Atualização 
  
-//atualização de dados da tabela customers
+> atualização de dados da tabela customers
 procure dados da linha em que first_name seja = "John"
 e atualize por {first_name:"John",last_name:"Doe", gender:"male"}
 
@@ -243,7 +243,7 @@ db.customers.update(
 	
  );
  
-//para atualizar á tabela criando uma coluna da tabela ->{$set:{ gender:"male"}}
+> para atualizar á tabela criando uma coluna da tabela ->{$set:{ gender:"male"}}
 
 db.customers.update(
 
@@ -268,7 +268,7 @@ db.customers.update(
 	
  );
 
- //remove coluna e dado da tabela
+ > remove coluna e dado da tabela
  
 db.customers.update(
 
@@ -278,7 +278,7 @@ db.customers.update(
  );
 
 
- //NÃO ATUALIZA
+ > NÃO ATUALIZA
  
 db.customers.update(
 
@@ -287,7 +287,7 @@ db.customers.update(
 	
  );
 
- // adiciona os dados de Mary no banco
+ > adiciona os dados de Mary no banco
  
 db.customers.update(
 
@@ -296,7 +296,7 @@ db.customers.update(
 	
  );
 
-//renomeia apenas o nome da coluna de gender para sex
+> renomeia apenas o nome da coluna de gender para sex
 
 db.customers.update(
 
@@ -308,7 +308,7 @@ db.customers.update(
  
 # Exclução 
  
-//exclui os dados do Steven da tabela
+> exclui os dados do Steven da tabela
 
 db.customers.remove({first_name:"Steven"});
 
