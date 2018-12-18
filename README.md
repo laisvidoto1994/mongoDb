@@ -1,21 +1,14 @@
 # mongoDb
 
-comando do mongodB   
-
 exemplo-> 
 https://www.youtube.com/watch?v=pWbMrx5rVBE
 
 instalação-> 
 https://www.youtube.com/watch?v=FwMwO8pXfq0
-
-//--directoryperdb
-
-> Usa um diretório separado para armazenar dados para cada banco de dados. 
-Os diretórios estão sob o --dbpathdiretório e cada nome de subdiretório corresponde ao nome do banco de dados.
-
-> --dbpath <path> 	
-	
-> O diretório no qual a instância do mongod armazena seus dados.
+  
+> --directoryperdb Usa um diretório separado para armazenar dados para cada banco de dados. 
+Os diretórios estão sob o --dbpathdiretório e cada nome de subdiretório corresponde ao nome do banco de dados. 
+> --dbpath <path> O diretório no qual a instância do mongod armazena seus dados.
 
 > abrir á pasta como admin
 #### mongod --directoryperdb --dbpath C:\mongodb\data\db --logpath C:\mongodb\log\mongo.log --logappend --install textcolor(4);
