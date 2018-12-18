@@ -73,11 +73,11 @@ Os diretórios estão sob o --dbpathdiretório e cada nome de subdiretório corr
 
 > comando de criação de um usuario no banco de dados e seu nivel de acesso
 
-db.createUser({  
-	user: "lais",	  
-	pwd: "123456",	  
-	roles: [ "readWrite", "dbAdmin" ]	  
-});
+#### db.createUser({  
+#### 	user: "lais",	  
+#### 	pwd: "123456",	  
+#### 	roles: [ "readWrite", "dbAdmin" ]	  
+#### });
 
 > cria no nome da tabela  
 #### db.createCollection('nomeDaTabela');
@@ -94,79 +94,78 @@ db.createUser({
 
 > inserir varios dados os mesmo tempo  
 #### db.customers.insert([  
-	{first_name:"Steven",last_name:"Smith"},  
-	{first_name:"Joan",last_name:"Johnson", gender:"female"}  
-]);
+#### 	{first_name:"Steven",last_name:"Smith"},  
+#### 	{first_name:"Joan",last_name:"Johnson", gender:"female"}  
+#### ]);
 
 > inserção em cadeia  
 #### db.customers.insert([  
-	{  
-		first_name:"Troy",   
-		last_name:"Makons",  
-		gender:"male",  
-		age:33,  
-		address:{  
-			street:"432 Essex st",  
-			city:"Lawrence",  
-			state:"MA"  
-		},  
-		memberships:["mem1", "mem2"],  
-		balance:125.32  
-	},   
-	{  
-		first_name:"Beth",  
-		last_name:"Jenkins",  
-		gender:"female",  
-		age:23,  
-		address:{  
-			street:"411 Blue st",
-			city:"Boston",
-			state:"MA"
-		},
-		memberships:["mem2", "mem3"],
-		balance:505.33
-	},
-	{
-		first_name:"Timothy",
-		last_name:"Wilkins",
-		gender:"male",
-		age:53,
-		address:{
-			street:"22 School st",
-			city:"Amesbury",
-			state:"MA"
-		},
-		memberships:["mem3", "mem4"],
-		balance:22.25
-	},
-	{
-		first_name:"Willian",
-		last_name:"Jackson",
-		gender:"male",
-		age:43,
-		address:{
-			street:"11 Albany st",
-			city:"Boston",
-			state:"MA"
-		},
-		memberships:["mem1"],
-		balance:333.23
-	}, 
-	{
-		first_name:"Sharon",
-		last_name:"Thompson",
-		gender:"female",
-		age:35,
-		address:{
-			street:"19 Willis st",
-			city:"Worchester",
-			state:"MA"
-		},
-		memberships:["mem1", "mem2"],
-		balance:99.99
-	}
-	
-]);
+#### 	{  
+#### 		first_name:"Troy",   
+#### 		last_name:"Makons",  
+#### 		gender:"male",  
+#### 		age:33,  
+#### 		address:{  
+#### 			street:"432 Essex st",  
+#### 			city:"Lawrence",  
+#### 			state:"MA"  
+#### 		},  
+#### 		memberships:["mem1", "mem2"],  
+#### 		balance:125.32  
+#### 	},   
+#### 	{  
+#### 		first_name:"Beth",  
+#### 		last_name:"Jenkins",  
+#### 		gender:"female",  
+#### 		age:23,  
+#### 		address:{  
+#### 			street:"411 Blue st",
+#### 			city:"Boston",
+#### 			state:"MA"
+#### 		},
+#### 		memberships:["mem2", "mem3"],
+#### 		balance:505.33
+#### 	},
+#### 	{
+#### 		first_name:"Timothy",
+#### 		last_name:"Wilkins",
+#### 		gender:"male",
+#### 		age:53,
+#### 		address:{
+#### 			street:"22 School st",
+#### 			city:"Amesbury",
+#### 			state:"MA"
+#### 		},
+#### 		memberships:["mem3", "mem4"],
+#### 		balance:22.25
+#### 	},
+#### 	{
+#### 		first_name:"Willian",
+#### 		last_name:"Jackson",
+#### 		gender:"male",
+#### 		age:43,
+#### 		address:{
+#### 			street:"11 Albany st",
+#### 			city:"Boston",
+#### 			state:"MA"
+#### 		},
+#### 		memberships:["mem1"],
+#### 		balance:333.23
+#### 	}, 
+#### 	{
+#### 		first_name:"Sharon",
+#### 		last_name:"Thompson",
+#### 		gender:"female",
+#### 		age:35,
+#### 		address:{
+#### 			street:"19 Willis st",
+#### 			city:"Worchester",
+#### 			state:"MA"
+#### 		},
+#### 		memberships:["mem1", "mem2"],
+#### 		balance:99.99
+#### 	}  	
+#### ]);
 
 
 # Busca 
@@ -219,55 +218,54 @@ db.createUser({
 procure dados da linha em que first_name seja = "John"
 e atualize por {first_name:"John",last_name:"Doe", gender:"male"}
 
-db.customers.update(  
-	{first_name:"John"},  
-	{first_name:"John",last_name:"Doe", gender:"male"}  	
- );
+#### db.customers.update(  
+#### 	{first_name:"John"},  
+#### 	{first_name:"John",last_name:"Doe", gender:"male"}  	
+####  );
  
 > para atualizar á tabela criando uma coluna da tabela ->{$set:{ gender:"male"}}
 
-db.customers.update(
-	{first_name:"Steven"},  
-	{$set:{gender:"male"} }  	
- );
+#### db.customers.update(
+#### 	{first_name:"Steven"},  
+#### 	{$set:{gender:"male"} }  	
+####  );
 
 
-db.customers.update(  
-	{first_name:"Steven"},  
-	{$set:{age:45} }  	
- );
+#### db.customers.update(  
+#### 	{first_name:"Steven"},  
+#### 	{$set:{age:45} }  	
+####  );
 
 
-db.customers.update(  
-	{first_name:"Steven"},  
-	{$inc:{age:5} }  	
- );
+#### db.customers.update(  
+#### 	{first_name:"Steven"},  
+#### 	{$inc:{age:5} }  	
+####  );
 
- > remove coluna e dado da tabela
- 
-db.customers.update(  
-	{first_name:"Steven"},  
-	{$unset:{age:1} }  	
- );
+ > remove coluna e dado da tabela   
+#### db.customers.update(  
+#### 	{first_name:"Steven"},  
+#### 	{$unset:{age:1} }  	
+####  );
 
 
  > NÃO ATUALIZA   
-db.customers.update(  
-	{first_name:"Mary"} ,	  
-	{$unset:{age:1} }  	
- );
+#### db.customers.update(  
+#### 	{first_name:"Mary"} ,	  
+#### 	{$unset:{age:1} }  	
+####  );
 
  > adiciona os dados de Mary no banco   
-db.customers.update(  
-	{first_name:"Mary"},	  
-	{first_name:"Mary",last_name:"Samson"},{upsert:true}  
-);
+#### db.customers.update(  
+#### 	{first_name:"Mary"},	  
+#### 	{first_name:"Mary",last_name:"Samson"},{upsert:true}  
+#### );
 
 > renomeia apenas o nome da coluna de gender para sex  
-db.customers.update(  
-	{first_name:"Steven"},	  
-	{$rename:{"gender":"sex"} }  	
- );
+#### db.customers.update(  
+#### 	{first_name:"Steven"},	  
+#### 	{$rename:{"gender":"sex"} }  	
+####  );
 
  
 # Exclução 
