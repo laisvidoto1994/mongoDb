@@ -1,6 +1,6 @@
 # mongoDb
 
-comando do mongodB  `oi`
+comando do mongodB   
 
 exemplo-> 
 https://www.youtube.com/watch?v=pWbMrx5rVBE
@@ -70,7 +70,7 @@ Os diretórios estão sob o --dbpathdiretório e cada nome de subdiretório corr
 #### exit
 
 # Criação do usuário do banco 
-
+*****
 > comando de criação de um usuario no banco de dados e seu nivel de acesso
 
 #### db.createUser({  
