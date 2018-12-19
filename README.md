@@ -6,6 +6,8 @@ https://www.youtube.com/watch?v=pWbMrx5rVBE
 instalação-> 
 https://www.youtube.com/watch?v=FwMwO8pXfq0
   
+exemplo NodeJS e MongoDB -> https://www.youtube.com/watch?v=a3Hg4qTquFA
+  
 > --directoryperdb Usa um diretório separado para armazenar dados para cada banco de dados. 
 Os diretórios estão sob o --dbpathdiretório e cada nome de subdiretório corresponde ao nome do banco de dados. 
 > --dbpath <path> O diretório no qual a instância do mongod armazena seus dados.
